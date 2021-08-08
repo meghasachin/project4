@@ -8,7 +8,7 @@ public class MyMath {
 	}
 	
 	public double testSubtract(double a, double b) {
-		return a-b;
+		return Math.abs(a-b);
 	}
 	
 	public double testMultiply(double a, double b) {

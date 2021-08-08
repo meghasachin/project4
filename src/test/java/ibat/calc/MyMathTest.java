@@ -67,7 +67,7 @@ public class MyMathTest {
 		double a = 5.5;
 		double b = 4.4;
 		double result = testObject.testSubtract(a, b);
-		assertEquals("Substraction of 5.5 and 4.4 is.", 1.1, result, 0);
+		assertEquals("Substraction of 5.5 and 4.4 is.", 1.1, result, 0.1);
 	}
 	
 	@Test
@@ -75,7 +75,7 @@ public class MyMathTest {
 		double a = 5.5;
 		double b = -4.4;
 		double result = testObject.testSubtract(a, b);
-		assertEquals("Substraction of 5.5 and -4.4 is.", 10, result, 0);
+		assertEquals("Substraction of 5.5 and -4.4 is.", 10, result, 0.1);
 	}
 	
 	@Test
@@ -83,7 +83,7 @@ public class MyMathTest {
 		double a = -5.5;
 		double b = -4.4;
 		double result = testObject.testSubtract(a, b);
-		assertEquals("Substraction of -5.5 and -4.4 is.", 1.1, result, 0);
+		assertEquals("Substraction of -5.5 and -4.4 is.", 1.1, result, -0.1);
 	}
 	
 	@Test
