@@ -27,8 +27,32 @@ public class MyMathTest {
 		double a = 5.5;
 		double b = 5.2;
 		double result = testObject.testAdd(a, b);
-		assertEquals("Addition of 10 and 20 is.", 10.7, result, 0);
+		assertEquals("Addition of 5.5 and 5.2 is.", 10.7, result, 0);
 	}
+	
+	@Test
+	public void testAdd_TC3() {
+		double a = 0;
+		double b = 0;
+		double result = testObject.testAdd(a, b);
+		assertEquals("Addition of 0 and 0 is.", 0, result, 0);
+	}	
+	
+	@Test
+	public void testAdd_TC4() {
+		double a = -5;
+		double b = 7;
+		double result = testObject.testAdd(a, b);
+		assertEquals("Addition of -5 and 7 is.", 2, result, 0);
+	}
+	
+	@Test
+	public void testAdd_TC5() {
+		double a = -5;
+		double b = -7;
+		double result = testObject.testAdd(a, b);
+		assertEquals("Addition of -5 and -7 is.", -12, result, 0);
+	}	
 	
 	@Test
 	public void testSubtract_TC1() {
