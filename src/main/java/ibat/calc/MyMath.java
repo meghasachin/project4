@@ -3,19 +3,19 @@ package ibat.calc;
 
 public class MyMath {
 	
-	public double testAdd(int a, int b) {
+	public double testAdd(double a, double b) {
 		return a+b;
 	}
 	
-	public double testSubtract(int a, int b) {
+	public double testSubtract(double a, double b) {
 		return a-b;
 	}
 	
-	public double testMultiply(int a, int b) {
+	public double testMultiply(double a, double b) {
 		return a*b;
 	}
 	
-	public double testDivide(int a, int b) {
+	public double testDivide(double a, double b) {
 		return a/b;
 	}
 }

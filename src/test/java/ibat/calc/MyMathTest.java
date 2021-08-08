@@ -16,10 +16,18 @@ public class MyMathTest {
 	
 	@Test
 	public void testAdd_TC1() {
-		int a = 10;
-		int b = 20;
+		double a = 10;
+		double b = 20;
 		double result = testObject.testAdd(a, b);
 		assertEquals("Addition of 10 and 20 is.", 30, result, 0);
+	}
+	
+	@Test
+	public void testAdd_TC2() {
+		double a = 5.5;
+		double b = 5.2;
+		double result = testObject.testAdd(a, b);
+		assertEquals("Addition of 10 and 20 is.", 10.7, result, 0);
 	}
 	
 	@Test
