@@ -63,6 +63,38 @@ public class MyMathTest {
 	}
 	
 	@Test
+	public void testSubtract_TC2() {
+		double a = 5.5;
+		double b = 4.4;
+		double result = testObject.testSubtract(a, b);
+		assertEquals("Substraction of 5.5 and 4.4 is.", 1.1, result, 0);
+	}
+	
+	@Test
+	public void testSubtract_TC3() {
+		double a = 5.5;
+		double b = -4.4;
+		double result = testObject.testSubtract(a, b);
+		assertEquals("Substraction of 5.5 and -4.4 is.", 10, result, 0);
+	}
+	
+	@Test
+	public void testSubtract_TC4() {
+		double a = -5.5;
+		double b = -4.4;
+		double result = testObject.testSubtract(a, b);
+		assertEquals("Substraction of -5.5 and -4.4 is.", 1.1, result, 0);
+	}
+	
+	@Test
+	public void testSubtract_TC5() {
+		double a = 0;
+		double b = 0;
+		double result = testObject.testSubtract(a, b);
+		assertEquals("Substraction of 0 and 0 is.", 0, result, 0);
+	}	
+	
+	@Test
 	public void testMultiply() {
 		int a = 10;
 		int b = 20;
