@@ -8,14 +8,14 @@ public class MyMath {
 	}
 	
 	public int testSubtract(int a, int b) {
-		return 0;
+		return a-b;
 	}
 	
 	public int testMultiply(int a, int b) {
-		return 0;
+		return a*b;
 	}
 	
 	public int testDivide(int a, int b) {
-		return 0;
+		return a/b;
 	}
 }
