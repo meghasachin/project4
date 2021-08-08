@@ -4,7 +4,7 @@ package ibat.calc;
 public class MyMath {
 	
 	public int testAdd(int a, int b) {
-		return 0;
+		return a+b;
 	}
 	
 	public int testSubtract(int a, int b) {
