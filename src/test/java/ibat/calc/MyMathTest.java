@@ -204,12 +204,11 @@ public class MyMathTest {
 		assertEquals("Division of -5.5 and -4.4 is.", new BigDecimal(1.25).floatValue(), result, 0.0);
 	}
 	
-//	// test division of zeros
-//	@Test
-//	public void testDivide_TC5() {
-//		BigDecimal a = new BigDecimal(0);
-//		BigDecimal b = new BigDecimal(0);
-//		float result = testObject.divide(a, b);
-//		assertEquals("Division of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
-//	}
+	// test division of zeros; should throw arithmetic exception 
+	@Test (expected = ArithmeticException.class)
+	public void testDivide_TC5() {
+		BigDecimal a = new BigDecimal(0);
+		BigDecimal b = new BigDecimal(0);
+		float result = testObject.divide(a, b);
+	}
 }
