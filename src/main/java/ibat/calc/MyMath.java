@@ -1,21 +1,22 @@
 package ibat.calc;
 
+import java.math.BigDecimal;
 
 public class MyMath {
 	
-	public double testAdd(double a, double b) {
-		return a+b;
+	public float testAdd(BigDecimal a, BigDecimal b) {
+		return a.add(b).floatValue();
 	}
 	
-	public double testSubtract(double a, double b) {
-		return Math.abs(a-b);
+	public float testSubtract(BigDecimal a, BigDecimal b) {
+		return a.subtract(b).floatValue();
 	}
 	
-	public double testMultiply(double a, double b) {
-		return a*b;
+	public float testMultiply(BigDecimal a, BigDecimal b) {
+		return a.multiply(b).floatValue();
 	}
 	
-	public double testDivide(double a, double b) {
-		return a/b;
+	public float testDivide(BigDecimal a, BigDecimal b) {
+		return a.divide(b).floatValue();
 	}
 }
