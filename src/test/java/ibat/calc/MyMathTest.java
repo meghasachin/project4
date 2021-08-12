@@ -21,7 +21,7 @@ public class MyMathTest {
 	public void testAdd_TC1() {
 		BigDecimal a = new BigDecimal(10);
 		BigDecimal b = new BigDecimal(20);
-		float result = testObject.testAdd(a, b);
+		float result = testObject.add(a, b);
 		assertEquals("Addition of 10 and 20 is.", 30, result, 0.0);
 	}
 	
@@ -31,7 +31,7 @@ public class MyMathTest {
 	public void testAdd_TC2() {
 		BigDecimal a = new BigDecimal(5.5);
 		BigDecimal b = new BigDecimal(5.2);
-		float result = testObject.testAdd(a, b);
+		float result = testObject.add(a, b);
 		assertEquals("Addition of 5.5 and 5.2 is.", new BigDecimal(10.7).floatValue(), result, 0.0);
 	}
 	
@@ -40,7 +40,7 @@ public class MyMathTest {
 	public void testAdd_TC3() {
 		BigDecimal a = new BigDecimal(0);
 		BigDecimal b = new BigDecimal(0);
-		float result = testObject.testAdd(a, b);
+		float result = testObject.add(a, b);
 		assertEquals("Addition of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
 	}
 	
@@ -49,7 +49,7 @@ public class MyMathTest {
 	public void testAdd_TC4() {
 		BigDecimal a = new BigDecimal(-5);
 		BigDecimal b = new BigDecimal(7);
-		float result = testObject.testAdd(a, b);
+		float result = testObject.add(a, b);
 		assertEquals("Addition of -5 and 7 is.", new BigDecimal(2).floatValue(), result, 0.0);
 	}
 	
@@ -58,15 +58,16 @@ public class MyMathTest {
 	public void testAdd_TC5() {
 		BigDecimal a = new BigDecimal(-5);
 		BigDecimal b = new BigDecimal(-7);
-		float result = testObject.testAdd(a, b);
+		float result = testObject.add(a, b);
 		assertEquals("Addition of -5 and -7 is.", new BigDecimal(-12).floatValue(), result, 0.0);
 	}	
-	
+
+	// test subtraction of positive whole numbers
 //	@Test
 //	public void testSubtract_TC1() {
 //		int a = 20;
 //		int b = 10;
-//		double result = testObject.testSubtract(a, b);
+//		float result = testObject.testSubtract(a, b);
 //		assertEquals("Substraction of 20 and 10 is.", 10, result, 0);
 //	}
 //	
