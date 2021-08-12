@@ -15,7 +15,10 @@ public class MyMathTest {
 	public void initialize() {
 		testObject = new MyMath();
 	}
-	
+
+	/*********************************************************************************************************/
+	/*                                 			Addition													 */
+	/*********************************************************************************************************/
 	// testing addition of whole numbers
 	@Test
 	public void testAdd_TC1() {
@@ -62,6 +65,10 @@ public class MyMathTest {
 		assertEquals("Addition of -5 and -7 is.", new BigDecimal(-12).floatValue(), result, 0.0);
 	}	
 
+	/*********************************************************************************************************/
+	/*                                 			Subtraction													 */
+	/*********************************************************************************************************/
+
 	// test subtraction of positive whole numbers
 	@Test
 	public void testSubtract_TC1() {
@@ -107,19 +114,53 @@ public class MyMathTest {
 		assertEquals("Substraction of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
 	}	
 	
-//	@Test
-//	public void testMultiply() {
-//		int a = 10;
-//		int b = 20;
-//		double result = testObject.testMultiply(a, b);
-//		assertEquals("Multiplication of 10 and 20 is.", 200, result, 0);
-//	}
-//	
-//	@Test
-//	public void testDivide() {
-//		int a = 20;
-//		int b = 10;
-//		double result = testObject.testDivide(a, b);
-//		assertEquals("Multiplication of 20 and 10 is.", 2, result, 0);
-//	}
+	/*********************************************************************************************************/
+	/*                                 			Multiplication												 */
+	/*********************************************************************************************************/
+
+	// test multiplication of positive whole numbers
+	@Test
+	public void testMultiply_TC1() {
+		BigDecimal a = new BigDecimal(10);
+		BigDecimal b = new BigDecimal(20);
+		float result = testObject.multiply(a, b);
+		assertEquals("Multiplication of 10 and 20 is.", 200, result, 0);
+	}
+	
+	// test multiplication of positive decimal numbers
+	@Test
+	public void testMultiply_TC2() {
+		BigDecimal a = new BigDecimal(5.5);
+		BigDecimal b = new BigDecimal(4.4);
+		double result = testObject.multiply(a, b);
+		assertEquals("Multiplication of 5.5 and 4.4 is.", new BigDecimal(24.2).floatValue(), result, 0.0);
+	}
+	
+	// test multiplication of positive and negative decimal numbers
+	@Test
+	public void testMultiply_TC3() {
+		BigDecimal a = new BigDecimal(5.5);
+		BigDecimal b = new BigDecimal(-4.4); 
+		float result = testObject.multiply(a, b);
+		assertEquals("Multiplication of 5.5 and -4.5 is.", new BigDecimal(-24.2).floatValue(), result, 0.0);
+	}
+	
+	// test multiplication of both negative decimal numbers
+	@Test
+	public void testMultiply_TC4() {
+		BigDecimal a = new BigDecimal(-5.5);
+		BigDecimal b = new BigDecimal(-4.4);
+		float result = testObject.multiply(a, b);
+		assertEquals("Multiplication of -5.5 and -4.4 is.", new BigDecimal(24.2).floatValue(), result, 0.0);
+	}
+	
+	// test multiplication of zeros
+	@Test
+	public void testMultiply_TC5() {
+		BigDecimal a = new BigDecimal(0);
+		BigDecimal b = new BigDecimal(0);
+		float result = testObject.multiply(a, b);
+		assertEquals("Multiplication of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
+	}	
+
 }
