@@ -162,5 +162,54 @@ public class MyMathTest {
 		float result = testObject.multiply(a, b);
 		assertEquals("Multiplication of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
 	}	
+	
+	
+	/*********************************************************************************************************/
+	/*                                 			Division													 */
+	/*********************************************************************************************************/
 
+	// test division of positive whole numbers
+	@Test
+	public void testDivide_TC1() {
+		BigDecimal a = new BigDecimal(10);
+		BigDecimal b = new BigDecimal(20);
+		float result = testObject.divide(b, a);
+		assertEquals("Division of 20 and 10 is.", new BigDecimal(2).floatValue(), result, 0.0);
+	}
+	
+	// test division of positive decimal numbers
+	@Test
+	public void testDivide_TC2() {
+		BigDecimal a = new BigDecimal(5.5);
+		BigDecimal b = new BigDecimal(4.4);
+		double result = testObject.divide(a, b);
+		assertEquals("Division of 5.5 and 4.4 is.", new BigDecimal(1.25).floatValue(), result, 0.0);
+	}
+	
+	// test division of positive and negative decimal numbers
+	@Test
+	public void testDivide_TC3() {
+		BigDecimal a = new BigDecimal(5.5);
+		BigDecimal b = new BigDecimal(-4.4); 
+		float result = testObject.divide(a, b);
+		assertEquals("Division of 5.5 and -4.5 is.", new BigDecimal(-1.25).floatValue(), result, 0.0);
+	}
+	
+	// test division of both negative decimal numbers
+	@Test
+	public void testDivide_TC4() {
+		BigDecimal a = new BigDecimal(-5.5);
+		BigDecimal b = new BigDecimal(-4.4);
+		float result = testObject.divide(a, b);
+		assertEquals("Division of -5.5 and -4.4 is.", new BigDecimal(1.25).floatValue(), result, 0.0);
+	}
+	
+//	// test division of zeros
+//	@Test
+//	public void testDivide_TC5() {
+//		BigDecimal a = new BigDecimal(0);
+//		BigDecimal b = new BigDecimal(0);
+//		float result = testObject.divide(a, b);
+//		assertEquals("Division of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
+//	}
 }
