@@ -5,8 +5,8 @@ import java.math.RoundingMode;
 
 public class MyMath {
 	
-	public float MyAdd(BigDecimal a, BigDecimal b) {
-		return a.add(b).floatValue();
+	public int MyAdd(int a, int b) {
+		return a + b;
 	}
 	
 	public float MySubtract(BigDecimal a, BigDecimal b) {
