@@ -117,49 +117,49 @@ public class MyMathTest {
 	/*                                 			Multiplication												 */
 	/*********************************************************************************************************/
 
-	// test multiplication of positive whole numbers
+	// test multiplication of positive even whole numbers
 	@Test
 	public void testMultiply_TC1() {
-		BigDecimal a = new BigDecimal(10);
-		BigDecimal b = new BigDecimal(20);
-		float result = testObject.MyMultiply(a, b);
-		assertEquals("Multiplication of 10 and 20 is.", 200, result, 0);
+		int a = 10;
+		int b = 20;
+		int result = testObject.MyMultiply(a, b);
+		assertEquals("Multiplication of 10 and 20 is.", 200, result, 0);		
 	}
 	
-	// test multiplication of positive decimal numbers
+	// test multiplication of positive odd numbers
 	@Test
 	public void testMultiply_TC2() {
-		BigDecimal a = new BigDecimal(5.5);
-		BigDecimal b = new BigDecimal(4.4);
-		double result = testObject.MyMultiply(a, b);
-		assertEquals("Multiplication of 5.5 and 4.4 is.", new BigDecimal(24.2).floatValue(), result, 0.0);
+		int a = 7;
+		int b = 5;
+		int result = testObject.MyMultiply(a, b);
+		assertEquals("Multiplication of 7 and 5 is.", 35, result, 0.0);		
 	}
 	
 	// test multiplication of positive and negative decimal numbers
 	@Test
 	public void testMultiply_TC3() {
-		BigDecimal a = new BigDecimal(5.5);
-		BigDecimal b = new BigDecimal(-4.4); 
-		float result = testObject.MyMultiply(a, b);
-		assertEquals("Multiplication of 5.5 and -4.5 is.", new BigDecimal(-24.2).floatValue(), result, 0.0);
+		int a = 7;
+		int b = -5;
+		int result = testObject.MyMultiply(a, b);
+		assertEquals("Multiplication of 7 and -5 is.", -35, result, 0.0);		
 	}
 	
 	// test multiplication of both negative decimal numbers
 	@Test
 	public void testMultiply_TC4() {
-		BigDecimal a = new BigDecimal(-5.5);
-		BigDecimal b = new BigDecimal(-4.4);
-		float result = testObject.MyMultiply(a, b);
-		assertEquals("Multiplication of -5.5 and -4.4 is.", new BigDecimal(24.2).floatValue(), result, 0.0);
+		int a = -7;
+		int b - -5;
+		int result = testObject.MyMultiply(a, b);
+		assertEquals("Multiplication of -7 and -5 is.", 35, result, 0.0);
 	}
 	
 	// test multiplication of zeros
 	@Test
 	public void testMultiply_TC5() {
-		BigDecimal a = new BigDecimal(0);
-		BigDecimal b = new BigDecimal(0);
-		float result = testObject.MyMultiply(a, b);
-		assertEquals("Multiplication of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
+		int a = 0;
+		int b = 0;
+		int result = testObject.MyMultiply(a, b);
+		assertEquals("Multiplication of 0 and 0 is.", 0, result, 0.0);
 	}	
 	
 	
