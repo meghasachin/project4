@@ -167,47 +167,47 @@ public class MyMathTest {
 	/*                                 			Division													 */
 	/*********************************************************************************************************/
 
-	// test division of positive whole numbers
+	// test division of positive even whole numbers
 	@Test
 	public void testDivide_TC1() {
-		BigDecimal a = new BigDecimal(10);
-		BigDecimal b = new BigDecimal(20);
-		float result = testObject.MyDivide(b, a);
-		assertEquals("Division of 20 and 10 is.", new BigDecimal(2).floatValue(), result, 0.0);
+		int a = 20;
+		int b = 10;
+		int result = testObject.MyDivide(a, b);
+		assertEquals("Division of 20 and 10 is.", 2, result, 0.0);
 	}
 	
-	// test division of positive decimal numbers
+	// test division of positive odd whole numbers
 	@Test
 	public void testDivide_TC2() {
-		BigDecimal a = new BigDecimal(5.5);
-		BigDecimal b = new BigDecimal(4.4);
-		double result = testObject.MyDivide(a, b);
-		assertEquals("Division of 5.5 and 4.4 is.", new BigDecimal(1.25).floatValue(), result, 0.0);
+		int a = 25;
+		int b = 5;
+		int result = testObject.MyDivide(a, b);
+		assertEquals("Division of 25 and 5 is.", 5, result, 0.0);
 	}
 	
 	// test division of positive and negative decimal numbers
 	@Test
 	public void testDivide_TC3() {
-		BigDecimal a = new BigDecimal(5.5);
-		BigDecimal b = new BigDecimal(-4.4); 
-		float result = testObject.MyDivide(a, b);
-		assertEquals("Division of 5.5 and -4.5 is.", new BigDecimal(-1.25).floatValue(), result, 0.0);
+		int a = 25;
+		int b = -5;
+		int result = testObject.MyDivide(a, b);
+		assertEquals("Division of 25 and -5 is.", -5, result, 0.0);
 	}
 	
 	// test division of both negative decimal numbers
 	@Test
 	public void testDivide_TC4() {
-		BigDecimal a = new BigDecimal(-5.5);
-		BigDecimal b = new BigDecimal(-4.4);
-		float result = testObject.MyDivide(a, b);
-		assertEquals("Division of -5.5 and -4.4 is.", new BigDecimal(1.25).floatValue(), result, 0.0);
+		int a = -25;
+		int b = -5;		
+		int result = testObject.MyDivide(a, b);
+		assertEquals("Division of -25 and -5 is.", 5, result, 0.0);
 	}
 	
 	// test division of zeros; should throw arithmetic exception 
 	@Test (expected = ArithmeticException.class)
 	public void testDivide_TC5() {
-		BigDecimal a = new BigDecimal(0);
-		BigDecimal b = new BigDecimal(0);
-		float result = testObject.MyDivide(a, b);
+		int a = 0;
+		int b = 0;
+		int result = testObject.MyDivide(a, b);
 	}
 }
