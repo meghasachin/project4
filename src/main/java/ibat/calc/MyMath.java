@@ -13,8 +13,8 @@ public class MyMath {
 		return a - b;
 	}
 	
-	public float MyMultiply(BigDecimal a, BigDecimal b) {
-		return a.multiply(b).floatValue();
+	public int MyMultiply(int a, int b) {
+		return a * b;
 	}
 	
 	// Used MathContext based on suggestion on 

@@ -148,7 +148,7 @@ public class MyMathTest {
 	@Test
 	public void testMultiply_TC4() {
 		int a = -7;
-		int b - -5;
+		int b = -5;
 		int result = testObject.MyMultiply(a, b);
 		assertEquals("Multiplication of -7 and -5 is.", 35, result, 0.0);
 	}
