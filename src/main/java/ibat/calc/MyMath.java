@@ -9,8 +9,8 @@ public class MyMath {
 		return a + b;
 	}
 	
-	public float MySubtract(BigDecimal a, BigDecimal b) {
-		return a.subtract(b).floatValue();
+	public int MySubtract(int a, int b) {
+		return a - b;
 	}
 	
 	public float MyMultiply(BigDecimal a, BigDecimal b) {
