@@ -19,50 +19,49 @@ public class MyMathTest {
 	/*********************************************************************************************************/
 	/*                                 			Addition													 */
 	/*********************************************************************************************************/
-	// testing addition of whole numbers
+	// testing addition of whole even numbers
 	@Test
 	public void testAdd_TC1() {
-		BigDecimal a = new BigDecimal(10);
-		BigDecimal b = new BigDecimal(20);
-		float result = testObject.MyAdd(a, b);
+		int a = 10;
+		int b = 20;
+		int result = testObject.MyAdd(a, b);
 		assertEquals("Addition of 10 and 20 is.", 30, result, 0.0);
 	}
-	
-	
-	// testing addition of decimal numbers
+		
+	// testing addition of odd numbers
 	@Test
 	public void testAdd_TC2() {
-		BigDecimal a = new BigDecimal(5.5);
-		BigDecimal b = new BigDecimal(5.2);
-		float result = testObject.MyAdd(a, b);
-		assertEquals("Addition of 5.5 and 5.2 is.", new BigDecimal(10.7).floatValue(), result, 0.0);
+		int a = 5;
+		int b = 7;
+		int result = testObject.MyAdd(a, b);
+		assertEquals("Addition of 5 and 7 is.", 12, result, 0.0);	
 	}
 	
 	// testing addition of zero 
 	@Test
 	public void testAdd_TC3() {
-		BigDecimal a = new BigDecimal(0);
-		BigDecimal b = new BigDecimal(0);
-		float result = testObject.MyAdd(a, b);
-		assertEquals("Addition of 0 and 0 is.", new BigDecimal(0).floatValue(), result, 0.0);
+		int a = 0;
+		int b = 0;
+		int result = testObject.MyAdd(a, b);
+		assertEquals("Addition of 0 and 0 is.", 0, result, 0.0);
 	}
 	
 	// testing addition of positive and negative numbers
 	@Test
 	public void testAdd_TC4() {
-		BigDecimal a = new BigDecimal(-5);
-		BigDecimal b = new BigDecimal(7);
-		float result = testObject.MyAdd(a, b);
-		assertEquals("Addition of -5 and 7 is.", new BigDecimal(2).floatValue(), result, 0.0);
+		int a = -5;
+		int b = 7;
+		int result = testObject.MyAdd(a, b);
+		assertEquals("Addition of -5 and 7 is.", 2, result, 0.0);		
 	}
 	
 	// testing addition of both negative numbers
 	@Test
 	public void testAdd_TC5() {
-		BigDecimal a = new BigDecimal(-5);
-		BigDecimal b = new BigDecimal(-7);
-		float result = testObject.MyAdd(a, b);
-		assertEquals("Addition of -5 and -7 is.", new BigDecimal(-12).floatValue(), result, 0.0);
+		int a = -5;
+		int b = -7;
+		int result = testObject.MyAdd(a, b);
+		assertEquals("Addition of -5 and -7 is.", -12, result, 0.0);		
 	}	
 
 	/*********************************************************************************************************/
